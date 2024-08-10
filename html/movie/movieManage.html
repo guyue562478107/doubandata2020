@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣电影</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-row" id="divSearch" >
+    <div class="layui-form" style="margin-right: 20px;" >
+        <div class="layui-form-item layui-inline" style="padding-left: 0 ;">
+            <label class="layui-form-label">
+                名称
+            </label>
+            <div class="layui-inline">
+                <input type="text" name="movieName" id="movieName" placeholder="需要检索的电影名" class="layui-input" />
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">
+                导演
+            </label>
+            <div class="layui-inline">
+                <input type="text" name="movieDirector" id="movieDirector" placeholder="需要检索的导演" class="layui-input" />
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">
+                上映时间
+            </label>
+            <div class="layui-inline">
+                <input type="text" name="movieDate" id="movieDate" placeholder="需要检索的年份" class="layui-input" />
+            </div>
+        </div>
+
+<!--        <div class="layui-form-item layui-inline">-->
+<!--            <label class="layui-form-label">-->
+<!--                类型-->
+<!--            </label>-->
+<!--            <div class="layui-inline">-->
+<!--                <select name="movieCategory" id="movieCategory"  class="layui-input">-->
+<!--                    <option value="-1" selected>剧情</option>-->
+<!--                    <option value="0" selected>喜剧</option>-->
+<!--                    <option value="1" selected>爱情</option>-->
+<!--                    <option value="2" selected>古装</option>-->
+<!--                    <option value="3" selected>传记</option>-->
+<!--                    <option value="4" selected>冒险</option>-->
+<!--                    <option value="5" selected>动画</option>-->
+<!--                    <option value="6" selected>恐怖</option>-->
+<!--                    <option value="7" selected>战争</option>-->
+<!--                    <option value="8" selected>武侠</option>-->
+<!--                    <option value="9" selected>动作</option>-->
+<!--                    <option value="11" selected>历史</option>-->
+<!--                    <option value="12" selected>犯罪</option>-->
+<!--                    <option value="13" selected>科幻</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="layui-form-item layui-inline" style="margin-left: 50px">
+            <div class="layui-inline">
+                <button id="btnSearch" class="layui-btn layui-btn-radius">
+                    <i class="layui-icon layui-icon-search"></i>检索
+                </button>
+            </div>
+            <div class="layui-inline" style="margin-left: 20px">
+                <button id="btnSearchAll" class="layui-btn layui-btn-radius layui-btn-normal">
+                    显示全部
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="layui-row" id="result">
+    <table id="tblResult" lay-filter="tblResult">
+    </table>
+</div>
+
+<!--用户详情界面-->
+<div id="divMovieInfo" style="display: none;margin: 10px">
+    <div class="layui-form layui-form-pane" layui-filter="dramaInfoEdit">
+        <div class="layui-form-item">
+            <label class="layui-lable">上映日期：</label>
+            <div class="layui-input-block">
+                <input type="text" name="movieDate" id="updatemovieDate"
+                       required placeholder="输入上映日期" class="layui-input" />
+            </div>
+
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-lable">评论人数：</label>
+            <div class="layui-input-block">
+                <input type="text" name="movieVoteNum" id="updatemovieVoteNum"
+                       required placeholder="输入评论人数" class="layui-input" />
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/movieManage.js"></script>
+</html>

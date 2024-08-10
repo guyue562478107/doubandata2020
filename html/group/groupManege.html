@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小组管理界面</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+    <!--检索功能-->
+    <div class="layui-row" id="divSearch" >
+        <div class="layui-form" style="margin-right: 20px;">
+            <div class="layui-form-item layui-inline" style="padding-left: 0;">
+                <label class="layui-form-label">
+                    标题
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="article" id="article" placeholder="需要检测的标题名称" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline" style="padding-left: 0;">
+                <label class="layui-form-label">
+                    作者
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="zuozhe" id="zuozhe" placeholder="需要检测的作者名称" class="layui-input" />
+                </div>
+            </div>
+
+
+
+            <div class="layui-form-item layui-inline" style="margin-left: 50px">
+                <div class="layui-inline">
+                    <button id="btnSearch" class="layui-btn layui-btn-radius">
+                        <i class="layui-icon layui-icon-search"></i>检索
+                    </button>
+                </div>
+                <div class="layui-inline" style="margin-left: 20px">
+                    <button id="btnSearchAll" class="layui-btn layui-btn-radius layui-btn-normal">
+                        显示全部
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--  检索结果  -->
+    <div class="layui-row" id="result">
+        <table id="tblResult" lay-filter="tblResult">
+        </table>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/groupManage.js"></script>

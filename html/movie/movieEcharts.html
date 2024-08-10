@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-container">
+    <div class="layui-row" >
+
+        <h1> 仪表台，对数据进行图形化展示</h1>
+
+
+    </div>
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-lg6">
+            <div id="movieCount" style="width: 800px; height: 400px;">1</div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-lg6"  style=" ">
+            <h2>导演的作品评分</h2>
+            <div style="margin-left: 20%; margin-top: 20px">
+                <label class="layui-form-label">
+                    导演
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="movieDirector" id="movieDirector" placeholder="需要检索的导演" class="layui-input" />
+                </div>
+                <div class="layui-inline">
+                    <button id="btnEcharts" class="layui-btn layui-btn-radius">
+                        <i class="layui-icon layui-icon-search"></i>检索
+                    </button>
+                </div>
+            </div>
+            <table id="director" lay-filter="tblResult" style="width: 800px; height: 400px;"></table>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md6"></div>
+        <div class="layui-col-md6"></div>
+    </div>
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md6"></div>
+        <div class="layui-col-md6"></div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+<script src="https://cdn.bootcss.com/echarts/4.8.0/echarts.min.js"></script>
+<script src="https://echarts-www.cdn.bcebos.com/zh/asset/theme/shine.js"></script>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/movieEcharts.js"></script>

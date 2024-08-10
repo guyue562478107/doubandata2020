@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣电视剧数据可视化</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-container">
+    <div class="layui-row">
+        <div class="layui-col-lg12" style="text-align: center; font-size: 25px " ><b>豆瓣电视剧数据可视化展示</b></div>
+        <br>
+        <div class="layui-col-lg12" style="text-align: center; font-size: 15px ">数据基本来自于豆瓣</div>
+    </div>
+
+    <br>
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-lg6">
+            <div id="dramaCount" style="width: 100%; height: 500px;"></div>
+        </div>
+
+        <div class="layui-col-lg6">
+            <div id="dramaCount2" style="width: 100%; height: 500px;"></div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md6">
+            <div id="dramaCount3" style="width: 100%; height: 500px;"></div>
+        </div>
+        <div class="layui-col-md6">
+            <div id="dramaCount5" style="width: 100%; height: 500px;"></div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md6">
+            <div id="konghang" style="width: 100%; height: 100px;">
+                <h2>演员近年作品评分</h2>
+                <div style="margin-left: 20%; margin-top: 20px">
+                    <label class="layui-form-label">
+                        演员：
+                    </label>
+                    <div class="layui-inline">
+                        <input type="text" name="tvActors" id="tvActors" placeholder="需要检索的演员" class="layui-input" />
+                    </div>
+                    <div class="layui-inline">
+                        <button id="btnEcharts" class="layui-btn layui-btn-radius">
+                            <i class="layui-icon layui-icon-search"></i>检索
+                        </button>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                <table id="tblResult" lay-filter="tblResult" style="width: 800px; height: 400px;"></table>
+            </div>
+            <div id="dramaCount4" style="width: 100%; height: 500px;"></div>
+        </div>
+        <!--<div class="layui-col-md6">6</div>-->
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<script src="https://cdn.bootcss.com/echarts/4.8.0/echarts.min.js"></script>
+<script src="https://echarts-www.cdn.bcebos.com/zh/asset/theme/shine.js"></script>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/dramaEcharts.js"></script>
+<!--<script src="echarts.js"></script>-->
+<!-- 引入 vintage 主题 -->
+<script src="/js/logic/dark.js"></script>

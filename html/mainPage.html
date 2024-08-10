@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>豆瓣数据平台</title>
+
+<link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<div class="layui-header">
+			<div class="layui-logo">豆瓣数据平台</div>
+
+			<!-- 头部区域（可配合layui已有的水平导航） -->
+			<!--<ul class="layui-nav layui-layout-left">-->
+				<!--<li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-about" style="font-size: 18px;"></i> 基础信息</a></li>-->
+				<!--<li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-face-smile-b" style="font-size: 18px;"></i> 用户信息</a></li>-->
+			<!--</ul>-->
+			<ul class="layui-nav layui-layout-right">
+				<li class="layui-nav-item"><a href="javascript:;">
+					<img id="imgHeader" src="/imgs/man.png" class="layui-nav-img"> <span id="spanNickName">team01</span></a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a id="personalCenterA" href="/html/personalCenter.html" target="mainFrame"><i class="layui-icon layui-icon-note" style="font-size: 18px;"></i> 基本资料</a>
+						</dd>
+						<dd>
+							<a href="/html/passwd.html" target="mainFrame"><i class="layui-icon layui-icon-auz" style="font-size: 18px;"></i> 安全设置</a>
+						</dd>
+					</dl></li>
+				<li class="layui-nav-item"><a href="/logic/user/logout">退出 <i class="layui-icon layui-icon-unlink" style="font-size: 18px;"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree" lay-filter="leftMenuFilter" id="leftMenu">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;">基础信息管理</a>
+						<dl class="layui-nav-child">
+							<dd style="margin-left: 15px">
+								<a href="userManage.html" target="mainFrame">平台用户管理</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;">信息库</a>
+						<dl class="layui-nav-child">
+							<dd style="margin-left: 15px">
+								<a href="movie/movieManage.html" target="mainFrame">电影库</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="movie/movieEcharts.html" target="mainFrame">电影数据图形显示</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="music/musicManage.html" target="mainFrame">音乐库</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="music/musicEcharts.html" target="mainFrame">音乐数据图形显示</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="book.html" target="mainFrame">书籍库</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="drama/dramaManage.html" target="mainFrame">电视剧库</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="drama/dramaEcharts.html" target="mainFrame">电视剧数据图形显示</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="group/groupManege.html" target="mainFrame">小组库</a>
+							</dd>
+							<dd style="margin-left: 15px">
+								<a href="drama/groupEcharts.html" target="mainFrame">小组数据图形显示</a>
+							</dd>
+
+						</dl>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<div class="layui-body">
+			<!-- 内容主体区域 -->
+			<div style=" height: 100%;" class="layui-tab-content">
+				<div class="layui-tab-item layui-show" style="height: 100%;">
+					<iframe class="layui-col-xs12" name="mainFrame" id="ifMain" style="border: 0px" src="dashboard.html"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="layui-footer">
+			<!-- 底部固定区域 -->
+			© team01
+		</div>
+	</div>
+	<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+	<script type="text/javascript" src="/js/logic/mainPage.js"></script>
+</body>
+</html>

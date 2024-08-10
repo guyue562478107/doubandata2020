@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣电视剧管理</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+    <style type="text/css">
+        #divSearch{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--检索功能-->
+    <div class="layui-row" id="divSearch">
+        <div class="layui-form">    <!--  form表单  layui任何块状的元素都可以当表单-->
+            <div class="layui-form-item layui-inline">   <!--layui-inline条目在一行里进行展示-->
+                <label class="layui-form-label">
+                    电视剧名：
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="tvTitle" id="tvTitle" placeholder="需要检索的电视剧名" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">
+                    主演：
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="tvActors" id="tvActors"
+                        placeholder="需要检索的主演昵称" class="layui-input" />
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">
+                    制片地区:
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="tvRegion" id="tvRegion"
+                        placeholder="待检索作品的制片地区" class="layui-input" />
+                </div>
+
+                <!--
+                          <div class="layui-inline">
+                               <select name="tvRegion" id="tvRegion" class="layui-input">
+                                       <option value="-1" selected>全部</option>
+                                       <option value="韩国">韩国</option>
+                                       <option value="美国">美国</option>
+                                       <option value="日本">日本</option>
+                                       <option value="中国香港">中国香港</option>
+                                       <option value="英国">英国</option>
+                                       <option value="中国大陆">中国大陆</option>
+                                       <option value="中国台湾">中国台湾</option>
+                                       <option value="其他">其他</option>
+                                </select>
+                          </div>
+               -->
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div class="layui-inline">
+                    <button id="btnSearch" class="layui-btn layui-btn-success">
+                        <i class="layui-icon layui-icon-search"></i> 检索
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--检索结果  用表格进行结果展示-->
+    <div class="layui-row" id="result">
+        <table id="tblResult" lay-filter="tblResult" ></table>
+    </div>
+
+    <!--用户详情界面-->
+    <div id="divDramaInfo" style="display: none;margin: 10px">
+        <div class="layui-form layui-form-pane" layui-filter="dramaInfoEdit">
+            <div class="layui-form-item">
+                <label class="layui-lable">电视剧名称:</label>
+                <div class="layui-input-block">
+                    <span id="spanTvTitleForUpdate"></span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-lable">制片地区：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="tvRegion" id="updateTvRegion"
+                           required placeholder="输入制片地区" class="layui-input" />
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-lable">主演：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="tvActors" id="updateTvActors"
+                           required placeholder="输入主演" class="layui-input" />
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/dramaManage.js"></script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣读书管理</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+<!--检索功能-->
+    <div class="layui-row" id="divSearch">
+        <div class="layui-form" style="margin-right: 20px;">
+            <div class="layui-form-item layui-inline" style="padding-left: 0";>
+                <label class="layui-form-label">
+                    图书名称：
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="bookName" id="bookName" placeholder="需要检索的图书名称" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item layui-inlie" >
+                <label class="layui-form-label">
+                    作者：
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="bookAuthor" id="bookAuthor" placeholder="需要检索的作者" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item layui-inlie" >
+                <label class="layui-form-label">
+                    出版年份：
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="bookDate" id="bookDate" placeholder="需要检索的出版年份" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div class="layui-inline">
+                    <button id="btnSearch" class="layui-btn layui-btn-success">
+                        <i class="layui-icon layui-icon-search"></i> 检索
+                    </button>
+                </div>
+                <div class="layui-inline" style="margin-left: 20px">
+                    <button id="btnSearchAll" class="layui-btn layui-btn-radius layui-btn-normal">
+                        显示全部
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--检索结果-->
+    <div class="layui-row" id="result">
+        <table id="tblResult" lay-filter="tblResult">
+        </table>
+    </div>
+
+    <!--详情-->
+    <div id="divBookInfo" style="display: none;margin: 10px">
+        <div class="layui-form layui-form-pane" layui-filter="bookInfoEdit">
+            <div class="layui-form-item">
+                <label class="layui-lable">图书名称:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="bookAuthor" id="updateBookName"
+                           required placeholder="输入作者" class="layui-input" />
+                    <span id="spanBookUpdate"></span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-lable">作者：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="bookAuthor" id="updateBookAuthor"
+                           required placeholder="输入作者" class="layui-input" />
+                </div>
+
+
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/bookManage.js"></script>

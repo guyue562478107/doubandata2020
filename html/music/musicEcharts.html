@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-container">
+    <div class="layui-row" >
+        <center><h1> 豆瓣音乐库数据图形化显示</h1></center>
+    </div>
+
+
+
+
+    <div class="layui-collapse" lay-accordion>
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">专辑/EP分数统计</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-row layui-col-space10">
+<!--                    嵌套的折叠面板-->
+                    <div class="layui-collapse" lay-accordion>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">条形图展示</h2>
+                            <div class="layui-colla-content layui-show">
+                                <div class="layui-col-lg6">
+                                    <div id="musicCount" style="width: 800px; height: 400px;">1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">饼图展示</h2>
+                            <div class="layui-colla-content layui-show">
+                                <div class="layui-col-lg6">
+                                    <div id="musicCount2" style="width: 800px; height: 400px;">1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">漏斗图展示</h2>
+                            <div class="layui-colla-content layui-show">
+                                <div class="layui-col-lg6">
+                                    <div id="musicCount3" style="width: 800px; height: 400px;">1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">音乐类型图形化显示</h2>
+            <div class="layui-colla-content layui-show">
+
+<!--                嵌套的折叠面板-->
+                <div class="layui-collapse" lay-accordion>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">饼图展示</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class="layui-row layui-col-space10">
+                                <div id="type" style="width: 800px; height: 400px;"></div>
+                                <div class="layui-col-md6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">条形图展示</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class="layui-row layui-col-space10">
+                                <div id="type2" style="width: 800px; height: 400px;"></div>
+                                <div class="layui-col-md6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">漏斗图展示</h2>
+                        <div class="layui-colla-content layui-show">
+                            <div class="layui-row layui-col-space10">
+                                <div id="type3" style="width: 850px; height: 500px;"></div>
+                                <div class="layui-col-md6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">专辑时间及评分</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-row layui-col-space10">
+                    <div class="layui-col-lg6"  style=" ">
+                        <!--                        <h2>艺术家的作品评分</h2>-->
+                        <div style=" margin-top: 5px">
+                            <label class="layui-form-label">
+                                艺术家
+                            </label>
+                            <div class="layui-inline">
+                                <input type="text" name="musicSinger" id="musicSinger" placeholder="需要检索的艺术家" class="layui-input" />
+                            </div>
+                            <div class="layui-inline">
+                                <button id="btnEcharts" class="layui-btn layui-btn-radius">
+                                    <i class="layui-icon layui-icon-search"></i>检索
+                                </button>
+                            </div>
+                        </div>
+                        <table id="artist" lay-filter="tblResult" style="width: 800px; height: 400px;"></table>
+                    </div>
+                </div>
+            </div>
+
+
+        <!--分块示例-->
+        <!--        <div class="layui-row layui-col-space10">-->
+        <!--            <div class="layui-col-md6"></div>-->
+        <!--            <div class="layui-col-md6"></div>-->
+        <!--        </div>-->
+    </div>
+<!--    </div>-->
+</div>
+
+</body>
+</html>
+<script src="https://cdn.bootcss.com/echarts/4.8.0/echarts.min.js"></script>
+<script src="https://echarts-www.cdn.bcebos.com/zh/asset/theme/shine.js"></script>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/musicEcharts.js"></script>
+
+<script src="/js/logic/dark.js"></script>

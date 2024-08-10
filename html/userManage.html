@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+    <!--检索功能-->
+    <div class="layui-row" id="divSearch">
+        <div class="layui-form">    <!--  form表单  layui任何块状的元素都可以当表单-->
+            <div class="layui-form-item layui-inline">   <!--layui-inline条目在一行里进行展示-->
+                <label class="layui-form-label">
+                    用户名：
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="uid" id="uid" placeholder="需要检索的用户名" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">
+                    昵称：
+                </label>
+                <div class="layui-inline">
+                    <input type="text" name="nickName" id="nickName"
+                           placeholder="需要检索的用户昵称" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">
+                    状态：
+                </label>
+                <div class="layui-inline">
+                    <select name="state" id="selState" class="layui-input">   <!--下拉列表框-->
+                        <option value="-1" selected>全部</option>    <!--selected默认-->
+                        <option value="0">未激活</option>
+                        <option value="1">正常</option>
+                        <option value="2">屏蔽</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div class="layui-inline">
+                    <button id="btnSearch" class="layui-btn layui-btn-success">
+                        <i class="layui-icon layui-icon-search"></i> 检索
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--检索结果  用表格进行结果展示-->
+    <div class="layui-row" id="result">
+        <table id="tblResult" lay-filter="tblResult" ></table>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/userManage.js"></script>

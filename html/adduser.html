@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/LogAndReg.css">
+</head>
+<body>
+<div id="all">
+    <div id="contain">
+        <div id="left">
+
+        </div>
+        <div id="right">
+            <div id="regis" class="layui-form layui-form-pane">
+                <ul>
+                    <li style="height: 30px">
+                        <div id="regis_head">
+                            <div id="regis__head_font" >
+                                <h2>注册</h2>
+                            </div>
+                            <div id="regis_head_a" >
+                                <p style="margin-left: 40%; width: 560px;">已有账号?&nbsp;&nbsp;&nbsp;<a href="Login.html">点击登陆</a></p>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li class="layui-form-item">
+                        <label class="layui-form-label">用户名:</label>
+                        <div class="layui-input-block">
+                            <input class="layui-input" type="text" id="uid" required lay-verify="required" name="uid" />
+                        </div>
+                    </li>
+                    <li class="layui-form-item">
+                        <label class="layui-form-label">密码:</label>
+                        <div class="layui-input-block">
+                            <input class="layui-input" type="password" id="pwd" required lay-verify="required" name="pwd" />
+                        </div>
+                    </li>
+                    <li class="layui-form-item">
+                        <label class="layui-form-label">确认密码:</label>
+                        <div class="layui-input-block">
+                            <input class="layui-input" type="password" id="rePwd" required lay-verify="required" name="rePwd" />
+                        </div>
+
+                    </li>
+                    <li class="layui-form-item">
+                        <label class="layui-form-label">昵称:</label>
+                        <div class="layui-input-block">
+                            <input class="layui-input" type="text" id="nickName" name="nickName" />
+                        </div>
+
+                    </li>
+                    <li class="layui-form-item" >
+
+                        <button class="layui-btn" id="btnSave" lay-submit lay-filter="saveAndCommit">注册新用户</button>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/addUser.js"></script>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆-team01</title>
+    <link rel="stylesheet" href="/css/LogAndReg.css">
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+<div id="all">
+    <div id="contain">
+        <div id="left">
+
+        </div>
+        <div id="right">
+            <div  id="login" class="layui-form layui-form-pane">
+                <ul>
+                    <li style="height: 30px">
+                        <div id="login_head" >
+                            <div id="login_head_font" style="">
+                                <h2>登陆</h2>
+                            </div>
+                            <div id="login_head_a" style="float: left;">
+                                <p style="margin-left: 40%; width: 560px;">没有账号?&nbsp;&nbsp;&nbsp;<a href="adduser.html">点击注册</a></p>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <form action ="/logic/user/login" method="post">
+                        <li class="layui-form-item" >
+                            <label class="layui-form-label">用户名:</label>
+                            <div class="layui-input-block">
+                                <input class="layui-input" type="text" id="uid" required lay-verify="required" name="uid">
+                            </div>
+                        </li>
+                        <li class="layui-form-item">
+                            <label class="layui-form-label">密码</label>
+                            <div class="layui-input-block">
+                                <input class="layui-input" type="password" id="pwd" required lay-verify="required" name="pwd">
+                            </div>
+                        </li>
+                        <li class="layui-form-item">
+                            <div id="login_main_but">
+                                <!--                <input class="layui-input" type="button" value="登陆" />-->
+                                <button class="layui-btn layui-btn-fluid" id="btnLogin" lay-submit lay-filter="Login">登陆</button>
+                            </div>
+
+
+                        </li>
+                    </form>
+
+                    <li>
+                        <div id="login_main_pwdlink">
+                            <a href="">已有帐号，忘记密码</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="login_main_hr">
+                            <div id="login_main_hrleft">
+                                <hr class="layui-bg-black">
+                            </div>
+                            <div id="login_main_hrcen">
+                                <p>其他方式登陆</p>
+                            </div>
+                            <div id="login_main_hrright">
+                                <hr class="layui-bg-black">
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div id="login_main_bottom">
+                            <div id="login_main_botweichat">
+                                <a href="https://wx.qq.com/">
+                                    <i class="layui-icon layui-icon-login-wechat" style="font-size: 30px; color: green;"></i>
+                                </a>
+                            </div>
+                            <div id="login_main_botqq">
+                                <a href="https://im.qq.com/">
+                                    <i class="layui-icon layui-icon-login-qq" style="font-size: 30px; color: #1E9FFF;"></i>
+                                </a>
+                            </div>
+                            <div id="login_main_botweibo">
+                                <a href="https://weibo.com/">
+                                    <i class="layui-icon layui-icon-login-weibo" style="font-size: 30px; color: #FFB800;"></i>
+                                </a>
+
+                            </div>
+                            <div id="login_main_botwindows">
+                                <a href="https://www.microsoftstore.com.cn/">
+                                    <i class="layui-icon layui-icon-windows" style="font-size: 30px; color: #01AAED;"></i>
+                                </a>
+                            </div>
+                            <div id="login_main_botothers">
+                                <div id="">
+                                    <i class="layui-icon layui-icon-more-vertical" style="font-size: 30px; color: #8D8D8D;"></i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣音乐管理</title>
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-row" id="divSearch" >
+    <div class="layui-form" >
+<!--        <div class="layui-form-item layui-inline" style="padding-left: 0;">-->
+
+<!--            <div class="layui-inline">-->
+<!--                <input type="text" name="musicName" id="musicName" placeholder="需要检索的专辑名" class="layui-input" />-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="layui-form-item layui-inline">
+<!--            <label class="layui-form-label">-->
+<!--                艺术家-->
+<!--            </label>-->
+            <div class="layui-inline">
+                <input type="text" name="musicSinger" id="musicSinger" placeholder="需要检索的艺术家" class="layui-input" />
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+<!--            <label class="layui-form-label">-->
+                流派
+<!--            </label>-->
+            <div class="layui-inline">
+                <select name="Type" id="musicType" class="layui-input">
+                    <option value="" selected>全部</option>
+                    <option value="流行" selected>流行</option>
+                    <option value="民谣" selected>民谣</option>
+                    <option value="说唱" selected>说唱</option>
+                    <option value="摇滚" selected>摇滚</option>
+                    <option value="原声" selected>原声</option>
+                    <option value="古典" selected>古典</option>
+                    <option value="电子" selected>电子</option>
+                    <option value="爵士" selected>爵士</option>
+                    <option value="" selected></option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item layui-inline">
+            <!--            <label class="layui-form-label">-->
+            时间
+            <!--            </label>-->
+            <div class="layui-inline">
+                <select name="musicTime" id="musicTime" class="layui-input">
+                    <option value="196" selected>1960-1969</option>
+                    <option value="197" selected>1970-1979</option>
+                    <option value="198" selected>1980-1989</option>
+                    <option value="199" selected>1990-1999</option>
+                    <option value="200" selected>2000-2009</option>
+                    <option value="201" selected>2010-2019</option>
+                    <option value="202" selected>2020-</option>
+                    <option value="" selected></option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item layui-inline">
+            <div class="layui-inline">
+                <button id="btnSearch" class="layui-btn layui-btn-radius">
+                    <i class="layui-icon layui-icon-search"></i>检索
+                </button>
+            </div>
+            <div class="layui-inline">
+                <button id="btnSearchAll" class="layui-btn layui-btn-radius layui-btn-normal">
+                    显示全部
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="layui-row" id="result">
+    <table id="tblResult" lay-filter="tblResult">
+    </table>
+</div>
+</body>
+<script type="text/javascript" src="/js/layui/layui.all.js"></script>
+<script type="text/javascript" src="/js/logic/musicManage.js"></script>
+</html>
